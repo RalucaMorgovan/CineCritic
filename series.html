@@ -9,188 +9,240 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">        
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RRTRT48X3Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RRTRT48X3Z');
+</script>
 <body>
 
     <!--Navbar-->
-    <header>
-        <button id="theme-switch">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
-    
-        </button>
-        <a href="index.html" class="log">
-            <i class="bi bi-film"></i>CineCritic
-        </a>
-        
-        <div class="meniu" id="menu-icon"><i class="bi bi-list"></i></div>
-    
-        <!--Meniu-->
-        <ul class="navbar">
-            <li><a href="index.html">Acasa</a></li>
-            <li><a href="movies.html" >Filme</a></li>
-            <li><a href="series.html" class="active">Seriale</a></li>
-            <li><a href="coming.html" >In curand</a></li>
-            <li><a href="contact.html" >Contacteaza-ne</a></li>
-        </ul>
-        <div class="container-search">
-            <div class="search">
-                <i class="bi bi-search"></i>
-            </div>
-    
-        <div class="input">
-            <input type="text" placeholder="Search" id="search">
-            <i class="bi bi-x-lg" id="clear"></i>
-        </div>
-    </header>
-    
+<header>
+    <button id="theme-switch">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
 
-        <!-- TV Series-->
-        <section class="series" id="series">
-            <h2 class="movies-heading">Seriale</h2>
-        <!-- TV Series Container -->
-        <div class="movies-container">
-            <!-- Box 1 -->
-            <div class="box">
-            <div class="box-img">
-                <img src="img/m1.jpg " alt="">
-            </div>
-            <h3>Venom</h3>
-            <span>120 min | Action</span>
+    </button>
+    <a href="index.html" class="log">
+        <i class="bi bi-film"></i>CineCritic
+    </a>
+    <div class="meniu" id="menu-icon"><i class="bi bi-list"></i></div>
+
+    <!--Meniu-->
+    <ul class="navbar">
+        <li><a href="index.html" >Acasa</a></li>
+        <li><a href="movies.html" >Filme</a></li>
+        <li><a href="series.html" class="active">Seriale</a></li>
+        <li><a href="coming.html" >In curand</a></li>
+        <li><a href="contact.html" >Contacteaza-ne</a></li>
+    </ul>
+    <div class="container-search">
+        <div class="search">
+            <i class="bi bi-search"></i>
         </div>
-        
+
+    <div class="input">
+        <input type="text" placeholder="Search" id="searchBar">
+        <i class="bi bi-x-lg" id="clear"></i>
+    </div>
+</header>
+
+ <!-- Movies-->
+ <section class="movies" id="movies">
+        <h2 class="movies-heading">Seriale</h2>
+    <!-- Movies Container -->
+    <div class="movies-container">
+        <!-- Box 1 -->
+        <div class="box" trailer-url="https://www.youtube.com/embed/qD07uzPJ8M0">
+            <div class="box-img">
+                <img src="img/Serial1.jpg" alt="">
+            </div>
+            <h3>When call the heart </h3>
+            <span>11 sez | Drama, Romantic</span>
+            <button class="play-button"><i class="bi bi-play-circle"></i></button>
+        </div>
+
         <!-- Box 2-->
-        <div class="box">
+        <div class="box" trailer-url="https://www.youtube.com/embed/_InqQJRqGW4">
             <div class="box-img">
-                <img src="img/m2.jpg " alt="">
+                    <img src="img/Serial2.png " alt="">
+                </div>
+                <h3>La casa de papel <i class="fa fa-paper-plane" aria-hidden="true"></i></h3>
+                <span>5 dez | Actiune, Furt</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
+
             </div>
-            <h3>Dunkirk</h3>
-            <span>120 min | Aventure</span>
-        </div>
         <!-- Box 3 -->
-        <div class="box">
+        <div class="box" trailer-url="https://www.youtube.com/embed/sQ-7eQUY2o4">
             <div class="box-img">
-                <img src="img/m3.jpg " alt="">
+                    <img src="img/Serial3.png " alt="">
+                </div>
+                <h3>Friends</h3>
+                <span>10 sez | Comedie</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
+
             </div>
-            <h3>Batman VS Superman</h3>
-            <span>120 min | Action</span>
-        </div>
         <!-- Box 4 -->
-        <div class="box">
+        <div class="box" trailer-url="https://www.youtube.com/embed/9LRnFU2h7Vk">
             <div class="box-img">
-                <img src="img/m4.jpg " alt="">
+                    <img src="img/Serial4.png " alt="">
+                </div>
+                <h3>Prison Break</h3>
+                <span>5 sez | Actiune, Drama</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
+
             </div>
-            <h3>John Wick 2</h3>
-            <span>120 min | Action</span>
-        </div>
         <!-- Box 5 -->
-        <div class="box">
+        <div class="box" trailer-url="https://www.youtube.com/embed/49RZx5tUKM4">
             <div class="box-img">
-                <img src="img/m5.jpg " alt="">
+                    <img src="img/Serial5.png " alt="">
+                </div>
+                <h3>Supergirl</h3>
+                <span>6 sez | Actiune, Sci-Fi</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
             </div>
-            <h3>Aqiaman</h3>
-            <span>120 min | Action</span>
-        </div>
         <!-- Box 6 -->
-        <div class="box">
+        <div class="box" trailer-url="https://www.youtube.com/embed/XQS7JkQmlx8">
             <div class="box-img">
-                <img src="img/m6.jpg " alt="">
+                    <img src="img/Serial6.png " alt="">
+                </div>
+                <h3>Arrow</h3>
+                <span> 8 sez | Actiune, Sci-Fi</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
             </div>
-            <h3>Black Panther</h3>
-            <span>120 min | Action</span>
-        </div>
         <!-- Box 7 -->
-        <div class="box">
+        <div class="box" trailer-url="https://www.youtube.com/embed/73_1biulkYk">
             <div class="box-img">
-                <img src="img/m7.jpg " alt="">
+                    <img src="img/Serial7.jpg " alt="">
+                </div>
+                <h3>Lucifer</h3>
+                <span>6 sez | Supernatural, Drama</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
             </div>
-            <h3>Thor</h3>
-            <span>120 min | Action</span>
-        </div>
         <!-- Box 8  -->
-        <div class="box">
+        <div class="box" trailer-url="https://www.youtube.com/embed/pDHqAj4eJcM">
             <div class="box-img">
-                <img src="img/m8.jpg " alt="">
+                    <img src="img/Serial8.png " alt="">
+                </div>
+                <h3>From</h3>
+                <span>3 sez | Supernatural, Horror</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
             </div>
-            <h3>Bumblebee</h3>
-            <span>120 min | Action</span>
-        </div>
         <!-- Box 9 -->
-        <div class="box">
+        <div class="box" trailer-url="https://www.youtube.com/embed/SJPJPUpNvDw">
             <div class="box-img">
-                <img src="img/m9.jpg " alt="">
+                    <img src="img/Serial9.png " alt="">
+                </div>
+                <h3>Superman & Lois</h3>
+                <span>3 sez| Actiune, Sci-Fi</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
             </div>
-            <h3>Mortal Engines</h3>
-            <span>120 min | Action</span>
-        </div>
         <!-- Box 10 -->
-        <div class="box">
+        <div class="box" trailer-url="https://www.youtube.com/embed/9pZrPauX_WM">
             <div class="box-img">
-                <img src="img/m10.jpg " alt="">
+                    <img src="img/Serial10.png " alt="">
+                </div>
+                <h3>Intimacy</h3>
+                <span>1 sez | Politica, Drama</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
             </div>
-            <h3>UnderWorld Blood Wars</h3>
-            <span>120 min | Action</span>
-        </div>
-        <!-- Box 9 -->
-        <div class="box">
+        <!-- Box 11 -->
+        <div class="box" trailer-url="https://www.youtube.com/embed/VMxgycxrLQk">
             <div class="box-img">
-                <img src="img/m9.jpg " alt="">
-            </div>
-            <h3>Mortal Engines</h3>
-            <span>120 min | Action</span>
-        </div>
-        <!-- Box 9 -->
-        <div class="box">
+                    <img src="img/Serial11.png " alt="">
+                </div>
+                <h3>Orphan Black</h3>
+                <span>5 sez | Drama, Thriller</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
+            </div>          
+        <!-- Box 12 -->
+        <div class="box" trailer-url="https://www.youtube.com/embed/VMxgycxrLQk">
             <div class="box-img">
-                <img src="img/m9.jpg " alt="">
-            </div>
-            <h3>Mortal Engines</h3>
-            <span>120 min | Action</span>
-        </div>
-        <!-- Box 9 -->
-        <div class="box">
+                    <img src="img/Serial12.png " alt="">
+                </div>
+                <h3>The Originals</h3>
+                <span>6 sez | Supernatural, Drama</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
+            </div>  
+        <!-- Box 13 -->
+        <div class="box" trailer-url="https://www.youtube.com/embed/qSu6i2iFMO0">
             <div class="box-img">
-                <img src="img/m9.jpg " alt="">
+                    <img src="img/Serial13.png " alt="">
+                </div>
+                <h3>Merlin</h3>
+                <span>6 sez | Supernatural, Fantezie</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
+            </div>         
+        <!-- Box 14 -->
+        <div class="box" trailer-url="https://www.youtube.com/embed/BmHM5eUp9w4">
+            <div class="box-img">
+                    <img src="img/Serial14.png " alt="">
+                </div>
+                <h3>Teen Wolf</h3>
+                <span>6 sez | Actiune, Adolescentin</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
+            </div>  
+        <!-- Box 15 -->
+        <div class="box" trailer-url="https://www.youtube.com/embed/OsWtKboQVac">
+            <div class="box-img">
+                    <img src="img/Serial15.png " alt="">
+                </div>
+                <h3>Chilling Adventures of Sabrina</h3>
+                <span>3 sez | Fantezie, Adolescentin</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
+            </div>  
+
+            <!-- Modal -->
+            <div id="trailer-modal" class="modal">
+                <div class="modal-content">
+                    <button id="close-button"><i class="bi bi-x"></i></button>
+                    <iframe id="trailer-video" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
             </div>
-            <h3>Mortal Engines</h3>
-            <span>120 min | Action</span>
-        </div>
-        
-        </section>
-        <section>
-            <section class="newsletter" id="newsletter">
-                <h2>Aboneaza-te pentru noutati</h2>
-                <form action="">
-                    <input type="email" placeholder="Enter the email..." required>
-                    <input type="submit" value="Subscribe" class="btn">
-                </form>
-            </section>
-        </section>
-        <button id="upButton">
-            <i class="bi bi-arrow-up-circle"></i>
-        </button>
-        
-        <div id="downButton">
-            <i class="bi bi-arrow-down-circle"></i>
-        </div>
-        <a href="help.html" class="help">
-            <i class="bi bi-question-circle">                               Ajutor</i>
-        </a>
-        
-        <!-- Footer -->
-         <section class="footer">
-            <div class="social">
-                <h3>Find us on</h3>
-                <span class="social-button">
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-twitter-x"></i></a>
-                <a href="#"><i class="bi bi-tiktok"></i></a>
-            </span>
-            </div>
-         </section>
+    </div>
+    
+</section>
+
+<section>
+    <section class="newsletter" id="newsletter">
+        <h2>Aboneaza-te pentru noutati</h2>
+        <form action="">
+            <input type="email" placeholder="Enter the email..." required>
+            <input type="submit" value="Subscribe" class="btn">
+        </form>
+    </section>
+</section>
+
+<button id="upButton">
+    <i class="bi bi-arrow-up-circle"></i>
+</button>
+
+<button id="downButton">
+    <i class="bi bi-arrow-down-circle"></i>
+</button>
+
+<a href="help.html" class="help">
+    <i class="bi bi-question-circle">                               Ajutor</i>
+</a>
+
+<!-- Footer -->
+ <section class="footer">
+    <div class="social">
+        <h3>Find us on</h3>
+        <span class="social-button">
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <a href="#"><i class="bi bi-tiktok"></i></a>
+    </span>
+    </div>
+ </section>
 <!-- JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="main.js"></script>
-
+        
 </body>
 </html>
