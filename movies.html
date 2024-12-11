@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">        
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RRTRT48X3Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RRTRT48X3Z');
+</script>
 <body>
 
     <!--Navbar-->
@@ -37,7 +45,7 @@
         </div>
 
     <div class="input">
-        <input type="text" placeholder="Search" id="search">
+        <input type="text" placeholder="Search" id="searchBar">
         <i class="bi bi-x-lg" id="clear"></i>
     </div>
 </header>
@@ -48,152 +56,157 @@
     <!-- Movies Container -->
     <div class="movies-container">
         <!-- Box 1 -->
-        <div class="box" data-id="1" data-title="Venom">
+        <div class="box" trailer-url="https://www.youtube.com/embed/HyIyd9joTTc">
+
             <div class="box-img">
                 <img src="img/m1.jpg" alt="">
             </div>
             <h3>Venom</h3>
-            <span>120 min | Action</span>
+            <span>120 min | Actiune</span>
+            <button class="play-button"><i class="bi bi-play-circle"></i></button>
         </div>
 
         <!-- Box 2-->
-            <div class="box">
-                <div class="box-img">
-                    <img src="img/m2.jpg " alt="">
+        <div class="box" trailer-url="https://www.youtube.com/embed/zAGVQLHvwOY">
+            <div class="box-img">
+                    <img src="img/Film2.jpg " alt="">
                 </div>
-                <h3>Dunkirk</h3>
-                <span>120 min | Aventure</span>
+                <h3>Joker</h3>
+                <span>122 min | Psihologic, Thriller</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
+
             </div>
         <!-- Box 3 -->
-            <div class="box">
-                <div class="box-img">
-                    <img src="img/m3.jpg " alt="">
+        <div class="box" trailer-url="https://www.youtube.com/embed/0HY6QFlBzUY">
+            <div class="box-img">
+                    <img src="img/Film3.jpg " alt="">
+                </div>
+                <h3>Smile 2</h3>
+                <span>127 min | Psihologic, Thriller, Tragedie</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
+
             </div>
-                <h3>Batman VS Superman</h3>
-                <span>120 min | Action</span>
-        </div>
         <!-- Box 4 -->
-            <div class="box">
-                <div class="box-img">
-                    <img src="img/m4.jpg " alt="">
-            </div>
-                <h3>John Wick 2</h3>
-                <span>120 min | Action</span>
+        <div class="box" trailer-url="https://www.youtube.com/embed/vjnqABgxfO0">
+            <div class="box-img">
+                    <img src="img/Film4.png " alt="">
+                </div>
+                <h3>The Grinch</h3>
+                <span>75 min | Animatie, Comedie</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
+
             </div>
         <!-- Box 5 -->
-            <div class="box">
-                <div class="box-img">
-                    <img src="img/m5.jpg " alt="">
-            </div>
-                <h3>Aqiaman</h3>
-                <span>120 min | Action</span>
+        <div class="box" trailer-url="https://www.youtube.com/embed/Q9qd4PckIvo">
+            <div class="box-img">
+                    <img src="img/Film5.jpg " alt="">
+                </div>
+                <h3>Moartea in vacanta</h3>
+                <span>89 min | Comedie</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
             </div>
         <!-- Box 6 -->
-            <div class="box">
-                <div class="box-img">
-                    <img src="img/m6.jpg " alt="">
-            </div>
-                <h3>Black Panther</h3>
-                <span>120 min | Action</span>
+        <div class="box" trailer-url="https://www.youtube.com/embed/zzCZ1W_CUoI">
+            <div class="box-img">
+                    <img src="img/Film6.png " alt="">
+                </div>
+                <h3>Despicable Me 4</h3>
+                <span>94 min | Animatie, Comedie</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
             </div>
         <!-- Box 7 -->
-            <div class="box">
-                <div class="box-img">
-                    <img src="img/m7.jpg " alt="">
-            </div>
-                <h3>Thor</h3>
-                <span>120 min | Action</span>
+        <div class="box" trailer-url="https://www.youtube.com/embed/73_1biulkYk">
+            <div class="box-img">
+                    <img src="img/Film7.png " alt="">
+                </div>
+                <h3>DeadPool & Wolverine</h3>
+                <span>128 min | Actiune, Comedie</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
             </div>
         <!-- Box 8  -->
-            <div class="box">
-                <div class="box-img">
-                    <img src="img/m8.jpg " alt="">
-            </div>
-                <h3>Bumblebee</h3>
-                <span>120 min | Action</span>
+        <div class="box" trailer-url="https://www.youtube.com/embed/xKJmEC5ieOk">
+            <div class="box-img">
+                    <img src="img/Film8.png " alt="">
+                </div>
+                <h3>IT</h3>
+                <span>132 min | Supernatural, Horror</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
             </div>
         <!-- Box 9 -->
-            <div class="box">
-                <div class="box-img">
-                    <img src="img/m9.jpg " alt="">
-            </div>
-                <h3>Mortal Engines</h3>
-                <span>120 min | Action</span>
-            </div>
-        <!-- Box 10 -->
-            <div class="box">
-                <div class="box-img">
-                    <img src="img/m10.jpg " alt="">
-            </div>
-                <h3>UnderWorld Blood Wars</h3>
-                <span>120 min | Action</span>
+        <div class="box" trailer-url="https://www.youtube.com/embed/JfVOs4VSpmA">
+            <div class="box-img">
+                    <img src="img/Film9.png " alt="">
+                </div>
+                <h3>Spider-Man: No Way Home</h3>
+                <span>148 min | Actiune, Sci-Fi</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
             </div>
         <!-- Box 10 -->
-        <div class="box">
+        <div class="box" trailer-url="https://www.youtube.com/embed/0g7SOE-zmhI">
             <div class="box-img">
-                <img src="img/m10.jpg " alt="">
-        </div>
-            <h3>UnderWorld Blood Wars</h3>
-            <span>120 min | Action</span>
-        </div>
-        <!-- Box 10 -->
-        <div class="box">
+                    <img src="img/Film10.png " alt="">
+                </div>
+                <h3>A Sudden Case of Christmas</h3>
+                <span>91 min | Comedie, Familie</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
+            </div>
+        <!-- Box 11 -->
+        <div class="box" trailer-url="https://www.youtube.com/embed/jEDaVHmw7r4">
             <div class="box-img">
-                <img src="img/m10.jpg " alt="">
-        </div>
-            <h3>UnderWorld Blood Wars</h3>
-            <span>120 min | Action</span>
-        </div>
-        <!-- Box 10 -->
-        <div class="box">
+                    <img src="img/Film11.png " alt="">
+                </div>
+                <h3>Home Alone</h3>
+                <span>103 min | Comedie, Familie</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
+            </div>          
+        <!-- Box 12 -->
+        <div class="box" trailer-url="https://www.youtube.com/embed/bqd702kNnRk">
             <div class="box-img">
-                <img src="img/m10.jpg " alt="">
-        </div>
-            <h3>UnderWorld Blood Wars</h3>
-            <span>120 min | Action</span>
-        </div>
-        <!-- Box 10 -->
-        <div class="box">
+                    <img src="img/Film12.png " alt="">
+                </div>
+                <h3>Family Pack</h3>
+                <span>94 min | Comedie, Aventura</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
+            </div>  
+        <!-- Box 13 -->
+        <div class="box" trailer-url="https://www.youtube.com/embed/qSu6i2iFMO0">
             <div class="box-img">
-                <img src="img/m10.jpg " alt="">
-        </div>
-            <h3>UnderWorld Blood Wars</h3>
-            <span>120 min | Action</span>
-        </div>
-        <!-- Box 10 -->
-        <div class="box">
+                    <img src="img/Film13.png " alt="">
+                </div>
+                <h3>Sonic the hedgehog 3</h3>
+                <span>110 min | Animatie, Aventura, Comedie</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
+            </div>         
+        <!-- Box 14 -->
+        <div class="box" trailer-url="https://www.youtube.com/embed/P3_dj7BnHp8">
             <div class="box-img">
-                <img src="img/m10.jpg " alt="">
-        </div>
-            <h3>UnderWorld Blood Wars</h3>
-            <span>120 min | Action</span>
-        </div>
-        <!-- Box 10 -->
-        <div class="box">
+                    <img src="img/Film14.png " alt="">
+                </div>
+                <h3>Upgraded</h3>
+                <span>104 min | Comedie, Romantic</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
+            </div>  
+        <!-- Box 15 -->
+        <div class="box" trailer-url="https://www.youtube.com/embed/YjTZMEbpKsc">
             <div class="box-img">
-                <img src="img/m10.jpg " alt="">
-        </div>
-            <h3>UnderWorld Blood Wars</h3>
-            <span>120 min | Action</span>
-        </div>
-        <!-- Box 10 -->
-        <div class="box">
-            <div class="box-img">
-                <img src="img/m10.jpg " alt="">
-        </div>
-            <h3>UnderWorld Blood Wars</h3>
-            <span>120 min | Action</span>
-        </div>
-        <!-- Box 10 -->
-        <div class="box">
-            <div class="box-img">
-                <img src="img/m10.jpg " alt="">
-        </div>
-            <h3>UnderWorld Blood Wars</h3>
-            <span>120 min | Action</span>
-        </div>        
+                    <img src="img/Film15.png " alt="">
+                </div>
+                <h3>Don't Move</h3>
+                <span>93 min | Horror, Thriller</span>
+                <button class="play-button"><i class="bi bi-play-circle"></i></button>
+            </div>  
 
+            <!-- Modal -->
+            <div id="trailer-modal" class="modal">
+                <div class="modal-content">
+                    <button id="close-button"><i class="bi bi-x"></i></button>
+                    <iframe id="trailer-video" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+    </div>
+    
 </section>
+
 <section>
     <section class="newsletter" id="newsletter">
         <h2>Aboneaza-te pentru noutati</h2>
@@ -203,6 +216,7 @@
         </form>
     </section>
 </section>
+
 <button id="upButton">
     <i class="bi bi-arrow-up-circle"></i>
 </button>
