@@ -185,6 +185,10 @@ header.shadow .logo{
     z-index: 1; 
     color: var(--bg-color);
     padding: 0 150px;
+    text-shadow: 2px 2px 0 var(--main-color), 
+    -2px -2px 0 var(--main-color),
+    2px -2px 0 var(--main-color),
+    -2px 2px 0 var(--main-color);
     
 }
 
@@ -270,7 +274,7 @@ header.shadow .logo{
     grid-template-columns: repeat(auto-fit, minmax(180px, auto));
     gap: 16px;
     margin-top: 32px;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
     color: var(--second-color);
 }
 
@@ -283,10 +287,13 @@ header.shadow .logo{
     grid-template-columns: repeat(auto-fit, minmax(180px, auto));
     gap: 16px;
     margin-top: 32px;
+    padding-top:30px;
+    padding-bottom: 50px;
     color: var(--second-color   );
 }
 
 .box {
+    position: relative;
     display: flex;
     flex-direction: column;
     color: var(--bg-color);
@@ -737,20 +744,24 @@ display: block;
 
 .play-button {
     position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px;
-    background-color: #ff6b6b;
-    color: white;
+    top: 10px;
+    right: 10px;
+    transition: transform 0.3s ease;
+    background-color: transparent;
+    color: var(--second-color);
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    font-size: 24px;
 }
 
-.play-button:hover {
-    background-color: #ff3b3b;
+
+.bi-play-circle{
+    font-size:30px
 }
+
+/* .play-button:hover {
+    background-color: #ff3b3b;
+} */
 
 /* Stil pentru modal */
 .modal {
@@ -768,19 +779,22 @@ display: block;
 
 .modal-content {
     position: relative;
-        width: 80%;
+    width: 80%;
     height: 80%;
 }
 
 button#close-button {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: red;
-    color: white;
+    top: 0;
+    right: 0;
+    background-color:var(--main-color);
+    color: var(--second-color);
     border: none;
-    padding: 10px;
     cursor: pointer;
+}
+
+.bi-x{
+    font-size:30px;
 }
 .video-container {
     width: 80%; /* Ajustează procentajul pentru a schimba lățimea */
@@ -881,6 +895,9 @@ form button:hover {
     display: block; /* Asigură-te că nu este `flex` dacă nu e necesar */
 }
 
+/* .help {
+    padding: 50px 20px;
+} */
 
 
 .help-header p {
@@ -923,8 +940,12 @@ form button:hover {
 }
 
 .additional-help p {
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
     color:var(--bg-color);
+}
+
+.additional-help h3{
+    padding-top: 20px;
 }
