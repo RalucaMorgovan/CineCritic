@@ -116,25 +116,28 @@
 
       // Afisam produsele pe baza rezultatelor
       if (filterData.length > 0) {
-        productList.innerHTML = filterData.map((item) => {
-          const { image, title, genre } = item; 
-          return `
-              <div class="movies-containers">
-            <div class="box">
-              <div class="box-img">
-                <img class="images" src="${image}" alt="${title}">
-              </div>
-              <div class="bottom">
-                <p>${title}</p>
-                <h2>${genre}</h2>
-              </div>
+  productList.innerHTML = `
+    <div class="movies-container">
+      ${filterData.map((item) => {
+        const { image, title, genre } = item; 
+        return `
+          <div class="box">
+            <div class="box-img">
+              <img class="images" src="${image}" alt="${title}">
             </div>
-          `;
-        }).join('');
-      } else {
-        productList.innerHTML = "Nu am găsit produse pentru termenul căutat.";
-      }
-    } 
+            <div class="bottom">
+              <p>${title}</p>
+              <h2>${genre}</h2>
+            </div>
+          </div>
+        `;
+      }).join('')}
+    </div>
+  `;
+} else {
+  productList.innerHTML = "Nu am item-ul.";
+}
+    }
   </script>
 </body>
 </html>
