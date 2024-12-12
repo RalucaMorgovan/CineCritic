@@ -112,50 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
-
-// const playButtons = document.querySelectorAll('.play-button'); 
-// const modal = document.getElementById('trailer-modal'); 
-// const closeButton = document.getElementById('close-button'); 
-// const trailerVideo = document.getElementById('trailer-video'); 
-
-
-// playButtons.forEach(button => {
-//     button.addEventListener('click', () => {
-
-//         const movieTrailer = button.closest('.box').getAttribute('trailer-url');
-
-
-//         trailerVideo.src = movieTrailer;
-
-
-//         modal.style.display = 'flex';
-
-//         document.body.classList.add('no-scroll');
-//     });
-// });
-
-
-// closeButton.addEventListener('click', () => {
-//     closeModal();
-// });
-
-
-// window.addEventListener('click', (event) => {
-//     if (event.target === modal) {
-//         closeModal();
-//     }
-// });
-
-
-// function closeModal() {
-//     modal.style.display = 'none';
-//     trailerVideo.src = ''; 
-
-
-//     document.body.classList.remove('no-scroll');
-// }
-
+  
 
 // SEARCH
 const categories = [
@@ -191,21 +148,19 @@ const categories = [
   { id: 29, image: 'img/Serial5.png', title: 'Chilling Adventures of Sabrina', genre: 'Fantezie, Adolescentin'} 
 ];
 
-// Adăugăm event listener pentru apăsarea tastelor în câmpul de căutare
 document.getElementById('searchBar').addEventListener('keyup', (e) => {
-  console.log("Căutarea a început: ", e.target.value);  // Verificăm ce se scrie în câmpul de căutare
-  if (e.key === 'Enter') {  // Verificăm dacă tasta apăsată este Enter
+  console.log("Căutarea a început: ", e.target.value);  
+  if (e.key === 'Enter') {  
       const searchData = e.target.value.toLowerCase();
       const filterData = categories.filter((item) => {
           return item.title.toLowerCase().includes(searchData) || item.genre.toLowerCase().includes(searchData);
       });
 
       if (filterData.length > 0) {
-          // Redirecționăm către o altă pagină cu parametrii căutării
-          const query = encodeURIComponent(searchData); // Codificăm termenii căutării pentru a fi siguri că sunt validați pentru URL
+          const query = encodeURIComponent(searchData); 
           window.location.href = `search-results.html?query=${query}`;
       } else {
-          alert("Nu exista acest item."); // Afișăm un mesaj dacă nu sunt rezultate
+          alert("Nu exista acest item."); 
       }
   }
 });
@@ -220,19 +175,18 @@ const trailerVideo = document.getElementById('trailer-video'); // Iframe-ul vide
 playButtons.forEach(button => {
     button.addEventListener('click', () => {
       console.log('buton');
-        const box = button.closest('.box'); // Găsim containerul părinte
+        const box = button.closest('.box'); 
         if (!box) return console.error("Elementul '.box' nu a fost găsit.");
 
-        const movieTrailer = box.getAttribute('trailer-url'); // Obținem URL-ul trailerului
+        const movieTrailer = box.getAttribute('trailer-url'); 
         if (!movieTrailer) return console.error("Atributul 'trailer-url' nu este definit.");
 
-        trailerVideo.src = movieTrailer; // Setăm sursa video
-        modal.style.display = 'flex';   // Afișăm modalul
-        document.body.classList.add('no-scroll'); // Dezactivăm scroll-ul paginii
+        trailerVideo.src = movieTrailer; 
+        modal.style.display = 'flex';   
+        document.body.classList.add('no-scroll'); 
     });
 });
 
-// Funcție pentru închiderea modalului
 closeButton.addEventListener('click', closeModal);
 window.addEventListener('click', (event) => {
     if (event.target === modal) {
@@ -240,9 +194,78 @@ window.addEventListener('click', (event) => {
     }
 });
 
-// Funcția care închide modalul și resetează sursa video
 function closeModal() {
-    modal.style.display = 'none'; // Ascundem modalul
-    trailerVideo.src = '';       // Resetăm sursa video
-    document.body.classList.remove('no-scroll'); // Permitem din nou scroll-ul paginii
+    modal.style.display = 'none'; 
+    trailerVideo.src = '';       
+    document.body.classList.remove('no-scroll'); 
 }
+
+document.querySelectorAll('.box').forEach((box) => {
+  const openReviewButton = box.querySelector('.open-review');
+  const popup = box.querySelector('.review-popup');
+  const closePopupButton = popup.querySelector('.close-popup');
+  const submitPopupReviewButton = popup.querySelector('.submit-popup-review');
+  const reviewTextarea = popup.querySelector('.popup-review-text');
+  const stars = popup.querySelectorAll('.rating .bi');
+  let selectedRating = 0;
+
+  const storedReview = localStorage.getItem(`review_${box.querySelector('h3').textContent}`);
+  if (storedReview) {
+    const { rating, reviewText } = JSON.parse(storedReview);
+
+    reviewTextarea.value = reviewText;
+    selectedRating = rating;
+    stars.forEach((star, index) => {
+      if (index < selectedRating) {
+        star.classList.remove('bi-star');
+        star.classList.add('bi-star-fill');
+      } else {
+        star.classList.remove('bi-star-fill');
+        star.classList.add('bi-star');
+      }
+    });
+  }
+
+  openReviewButton.addEventListener('click', () => {
+    popup.classList.remove('hidden');
+    popup.style.display = 'block';
+  });
+
+  closePopupButton.addEventListener('click', () => {
+    popup.classList.add('hidden');
+    popup.style.display = 'none';
+  });
+
+  stars.forEach((star, index) => {
+    star.addEventListener('click', () => {
+      selectedRating = index + 1;
+      stars.forEach((s, i) => {
+        if (i < selectedRating) {
+          s.classList.remove('bi-star');
+          s.classList.add('bi-star-fill');
+        } else {
+          s.classList.remove('bi-star-fill');
+          s.classList.add('bi-star');
+        }
+      });
+    });
+  });
+
+  submitPopupReviewButton.addEventListener('click', () => {
+    const reviewText = reviewTextarea.value.trim();
+    if (reviewText && selectedRating > 0) {
+      const reviewData = {
+        rating: selectedRating,
+        reviewText: reviewText,
+      };
+      localStorage.setItem(`review_${box.querySelector('h3').textContent}`, JSON.stringify(reviewData));
+      
+      alert(`Review trimis pentru ${box.querySelector('h3').textContent}`);
+      popup.classList.add('hidden');
+      popup.style.display = 'none';
+    } else {
+      alert('Te rugam sa selectezi un rating si sa scrii un review!');
+    }
+  });
+});
+
