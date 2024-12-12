@@ -271,14 +271,20 @@ header.shadow .logo{
     margin-right: auto;
     margin-left: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 16px;
     margin-top: 32px;
     padding-bottom: 50px;
     color: var(--second-color);
+    
+}
+.movies-containers {
+    display: flex;
+    gap: 16px;
+    
 }
 
-
+  
 .home-movies-container{
     max-width: 968px;
     margin-right: auto;
@@ -889,15 +895,16 @@ form button:hover {
 
 .help {
     max-width: 968px;
-    margin-left: auto;
+    margin-left: 400px;
     margin-right: auto;
-    padding: 50px 20px; /* Poți păstra padding-ul existent */
-    display: block; /* Asigură-te că nu este `flex` dacă nu e necesar */
+    padding: 50px 20px; 
+    display: inline-flex; 
 }
 
-/* .help {
-    padding: 50px 20px;
-} */
+
+.help:hover {
+    color: var(--second-color); /
+}
 
 
 .help-header p {
