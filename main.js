@@ -26,13 +26,21 @@ const disableLightmode = () => {
 }
 
 window.addEventListener("scroll", function() {
-  const header = document.querySelector("header");
-  if (window.scrollY > 50) { 
-      header.classList.add("shadow");
+  const btnscroll = document.querySelector('#upButton');
+  const btnscroll2 = document.querySelector('#downButton');
+  
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+    btnscroll.style.display = "block";
+    btnscroll2.style.display = "none";
+  } else if (window.scrollY === 0) {
+    btnscroll.style.display = "none";
+    btnscroll2.style.display = "block";
   } else {
-      header.classList.remove("shadow");
+    btnscroll.style.display = "block";
+    btnscroll2.style.display = "block";
   }
-}); 
+});
+
 
 var swiper = new Swiper(".home", {
     spaceBetween: 30, 
